@@ -1,0 +1,8 @@
+<ul class="wl-archive-list">
+  <button class="wl-archive-list__clear wl-btn" type="button" (click)="clearWishes()">
+    CLEAR ARCHIVE <span class="wl-clear-icon"><i class="icon-clear"></i></span>
+  </button>
+  <li *ngFor="let wish of uWishes">
+    {{wish.name | wlCapitalize}}
+  </li>
+</ul>

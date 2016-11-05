@@ -1,0 +1,32 @@
+
+<ul class="wishlist">
+  <li *ngFor="let wish of fWishes; let i = index;" class="wl-item-wrapper">
+    <button *ngIf="updatingWish == wish" class="wl-item-save" (click)="onUpdate(wish)">Save</button>
+    <div class="wl-item-menu dropdown">
+      <a class="dropdown-toggle" id="dropdownMenu-{{i}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" (click)="toggleDropdown($event)">
+        <i class="icon-item-menu"></i>
+      </a>
+      <nav class="dropdown-menu dropdown-menu-animated" [attr.aria-labelledby]="'dropdownMenu-' + i">
+        <button class="dropdown-item wl-btn" (click)="onEdit(wish, $event)">Edit</button>
+        <button class="dropdown-item wl-btn" (click)="onRemove(wish)">Delete</button>
+        <button class="dropdown-item wl-btn" (click)="onUnlock(wish)">Unlock</button>
+        <button class="dropdown-item wl-btn" (click)="onMakeAlpha(wish)">Make Alpha</button>
+      </nav>
+    </div>
+    <div class="wl-item">
+      <span [ngSwitch]="updateMe">
+        <span *ngSwitchWhen="updatingWish == wish">
+          <select class="form-control" required [(ngModel)]="wish.category" style="display: inline; width: 70px; padding: .3em;">
+            <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+          </select>
+        </span>
+        <span *ngSwitchDefault>{{wish.date | wlTimeTransform}}</span>
+      </span>
+      <span [ngSwitch]="updateMe">
+        <span *ngSwitchWhen="updatingWish == wish"><input required [(ngModel)]="wish.name" style="display: inline; width: 100px; padding: .3em;"/></span>
+        <span *ngSwitchDefault>{{wish.name | wlCapitalize}}</span>
+      </span>
+      <i class="icon-{{wish.category}}"></i>
+    </div>
+  </li>
+</ul>

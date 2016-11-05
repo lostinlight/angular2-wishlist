@@ -1,0 +1,13 @@
+<sidebar class="wl-activity-bar">
+<div class="wl-username">Alice <i class="icon-unfold"></i></div>
+<div class="wl-avatar"><img src="assets/images/avatar.png"></div>
+  <div class="wl-activity">
+    <p class="wl-activity__title">Latest Activity</p>
+    <ul>
+    <li *ngFor="let wish of lWishes">
+      <time>{{wish.date | wlTimeTransform}}</time>
+      <p class="wl-activity__wish">added {{wish.name | wlCapitalize}}</p>
+    </li>
+    </ul>
+  </div>
+</sidebar>

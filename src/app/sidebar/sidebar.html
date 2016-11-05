@@ -1,0 +1,10 @@
+<nav class="wl-sidebar">
+  <div class="wl-sidebar__logo">W</div>
+  <ul class="wl-sidebar__nav">
+    <li class="wl-sidebar__item active"><button class="wl-sidebar__btn wl-btn" (click)="filterByCategory('all', $event)"><i class="icon-index"></i><span>index</span></button></li>
+    <li class="wl-sidebar__item"><button class="wl-sidebar__btn wl-btn" (click)="filterByCategory('goods', $event)"><i class="icon-goods"></i><span>goods</span></button></li>
+    <li class="wl-sidebar__item"><button class="wl-sidebar__btn wl-btn" (click)="filterByCategory('trips', $event)"><i class="icon-trips"></i><span>trips</span></button></li>
+    <li class="wl-sidebar__item"><button class="wl-sidebar__btn wl-btn" (click)="filterByCategory('mates', $event)"><i class="icon-mates"></i><span>mates</span></button></li>
+    <li class="wl-sidebar__item"><button class="wl-sidebar__btn wl-btn" (click)="filterByCategory('bonus', $event)"><i class="icon-bonus"></i><span>bonus</span></button></li>
+  </ul>
+</nav>

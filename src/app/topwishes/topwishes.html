@@ -1,0 +1,10 @@
+<section class="wl-top-wishes" id="wl-top-wishes">
+
+  <div class="wl-wish-wrapper" *ngFor="let wish of aWishes">
+    <div class="wl-top-wish" [ngStyle]="{ 'background': '#7775ea url(assets/images/' + wish.image + '.jpg) top left no-repeat' }">
+      <span class="wl-top-title">{{wish.name | wlUpperCase}}</span>
+      <span class="wl-btn" (click)="onUnlock(wish)"><i class="icon-check"></i></span>
+    </div>
+  </div>
+
+</section>

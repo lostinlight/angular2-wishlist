@@ -1,0 +1,23 @@
+
+<div class="wl-new-wish dropdown">
+  <button class="wl-new-wish__toggle dropdown-toggle wl-btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" (click)="toggleDropdown($event)">
+    <span class="wl-toggle-icon"><i class="icon-plus"></i></span>
+    ADD NEW WISH
+  </button>
+
+  <div class="wl-new-wish__menu dropdown-menu dropdown-menu-animated" id="wl-new-wish__menu" aria-labelledby="dropdownMenu1">
+    <form (ngSubmit)="onSubmit()" #wishForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" maxlength="15" required [(ngModel)]="wish.name">
+      </div>
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select class="form-control" required [(ngModel)]="wish.category">
+          <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</div>
