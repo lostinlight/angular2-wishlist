@@ -2,7 +2,7 @@
   "name": "angular2-wishlist",
   "version": "1.0.0",
   "author": "lostinlight",
-  "description": "Angular 2 simple demo with mock data",
+  "description": "Angular 2 simple demo",
   "main": "src/tmp/app/main.js",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
     "gulp",
     "sass"
   ],
-  "license": "MIT",
+  "license": "AGPL-3.0",
   "comments": {
     "url": "https://github.com/lostinlight/angular2-wishlist/issues"
   },

@@ -1,27 +1,21 @@
-![open source for the win](https://kodeguild.com/shared/OpenSource4theWin.svg)
 
-## Angular 2 Wishlist
+#### Tiny Wishlist
 
-### Intro
-- Angular 2 / Typescript demo with mock data
-- Uses [Angular2-starter](https://github.com/antonybudianto/angular2-starter) as a starter-kit
+__UPD__: Vue.js 2 version can be found [here](https://github.com/lostinlight/vuejs-wishlist)
 
+Little experiment to try out Angular
 
-*Caution*: written before Angular 2 was officially released. Dependencies are out of date.
-My first look at Angular & Typescript. Please, bear with me.
+> Written before Angular 2 was officially released. Dependencies are *really* out of date.
 
-### Preview
-- Live Demo → [angular2-wishlist.herokuapp.com](https://angular2-wishlist.herokuapp.com) - takes *a lot* of time to load
+Live demo, however, still works in dev mode - [angular2-wishlist](https://angular2-wishlist.herokuapp.com) - takes time to load (heroku free dino)
 
-![screen one](preview.jpg?raw=true)
+![screen preview](preview.jpg?raw=true)
 
-### Commands
+#### Commands
 
 - `gulp` Development mode
 - `gulp build` Create production build
 - `gulp serve-build` Serve production build via Browsersync
 
-For further details read [Angular2-starter](https://github.com/antonybudianto/angular2-starter/wiki) Wiki.
-
-### Deploy to Heroku
+#### Deploy
 In package.json file change "postinstall" value to: __" typings install && gulp --env='prod' "__
